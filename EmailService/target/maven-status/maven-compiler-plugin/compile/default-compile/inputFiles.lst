@@ -1,9 +1,0 @@
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\QuartzEmailApplication.java
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\service\EmailSchedulingService.java
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\controller\EmailJobSchedulerController.java
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\domain\UpcomingFlightEmail.java
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\job\EmailJob.java
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\domain\Email.java
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\service\request\ScheduleEmailRequest.java
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\service\EmailSchedulingServiceImpl.java
-C:\Users\oogii\Desktop\Test\EmailService\src\main\java\edu\miu\cs544\emailservice\service\response\ScheduleEmailResponse.java
