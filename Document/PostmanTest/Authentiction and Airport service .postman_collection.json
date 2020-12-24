@@ -1,0 +1,629 @@
+{
+	"info": {
+		"_postman_id": "d8fd7a75-67e2-4871-92a9-faa3ebf02244",
+		"name": "CS544-AAAServer ",
+		"description": "Authentication, Authorization and Aggregation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserService",
+			"item": [
+				{
+					"name": "Signup",
+					"item": [
+						{
+							"name": "Agent signup",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNDM4NzkwLCJleHAiOjE1OTI1MjUxOTB9.21Ir04dOm4odkn-bIc5PlcBlnIItnyr-8wCfdNOdt22epQaYlY-ShkvSmm7s3NNFzM2S9rfKeEa_VhQy8mInwA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"agent2@miu.edu\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/sign-up/agent",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sign-up",
+										"agent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Passenger signup",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyMzI0MTcxLCJleHAiOjE1OTI0MTA1NzF9.bVa4U3wXlbJxSw0DDiXxccw7txBQDGfG0MR8wea5ciV8u2b28M43rkZyc82miSFgP5gFamSEZOKslGYa0iffZw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"passenger@miu.edu\",\r\n    \"password\": \"password\",\r\n    \"passengerId\": \"18\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/sign-up/passenger",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sign-up",
+										"passenger"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "login with admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@miu.edu\",\r\n    \"password\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login with agent",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"agent8@miu.edu\",\r\n    \"password\": \"agent\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login with passenger",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"pass1@miu.edu\",\r\n    \"password\": \"pass\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Validation",
+					"item": [
+						{
+							"name": "validate login with post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyMjgxMTkxLCJleHAiOjE1OTIzNjc1OTF9._n10r9uHQbrIbMrI6moCI6vQ6zQoE20lUDmt6xrxfxpub31i6u3nMk_1CznFhfKAz7_l7qK0tbY7-mubr6hB4A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyMjc4OTgyLCJleHAiOjE1OTIzNjUzODJ9.ep6cqgGJoEHlVRyl_8avolBY0AZrDcd9eB1KG00btrhr81vhb32kIsSFt_LUYGtC2HAsTsJ746IMc8dFvNuYLw",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/validate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate login with get",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwYXNzMUBtaXUuZWR1IiwiaWF0IjoxNTkyNTA5MjU2LCJleHAiOjE1OTI1OTU2NTZ9.EYqIMKTEsOdgdFXRBPtfc282QCT9Gv-avdG0QcIk_DgejIQsu2uqEGZhbspmz6ylD1jdOSMS71QDDe8l6vNlSA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/validate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"validate"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "AggregationService",
+			"item": [
+				{
+					"name": "Airport",
+					"item": [
+						{
+							"name": "Delete Airport",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNTA5MDE1LCJleHAiOjE1OTI1OTU0MTV9.LxNrs7JFPgmgrQrSSw3FyhAfl0vxKCTs2H2jM2R7n6LWMa4lxZgpVU0zocKY62s6pC7HiUlwZtEt_uEKEj1flw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/airports/ORD",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"airports",
+										"ORD"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Airports",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNDU3NjI3LCJleHAiOjE1OTI1NDQwMjd9.KhXkxETKddWrO3dIlvjhHLKOl3OA0AcF0OnICWSWRwqE-PFMg0A0PhZ_xY3ag4xgyRQpo4IsPwLQzH4P32dV9Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"code\":\"AA\",\r\n        \"name\":\"AAA\",\r\n        \"history\":\"BBBBBBBB\",\r\n        \"address\": {\r\n            \"street\": \"asdsad\",\r\n            \"city\": \"asdsad\",\r\n            \"state\": \"asdsad\",\r\n            \"zip\": \"asdsad\"\r\n        }\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/airports/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"airports",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create or Update Airport",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNTc0ODEzLCJleHAiOjE1OTI2NjEyMTN9.xVgfWr0v70ujxqArKx7f_8YZg66adFoGXHXwyESAj6XIMTc-m1nxWm6axTRSYeUvDKuBk8AVdERV9c00Xy_hMQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"code\":\"AFF\",\r\n    \"name\":\"AAABA\",\r\n    \"address\": {\r\n        \"street\": \"4th 1000\",\r\n        \"city\": \"Fairfield\",\r\n        \"state\": \"IA\",\r\n        \"zip\": \"52566\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/airports/AFF",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"airports",
+										"AFF"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Airline",
+					"item": [
+						{
+							"name": "Delete - Airline",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNTA5NDI2LCJleHAiOjE1OTI1OTU4MjZ9.ZHnCZH-iat3Cr6ZoApGfQJpjRCkOAj8hq4VotZ_xsOTn9cTh_5wLQ4rSxjEA7sinK9zagFuFuOqBuMoiNKTC8w",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/airlines/OM4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"airlines",
+										"OM4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Airlines",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNDU3NjI3LCJleHAiOjE1OTI1NDQwMjd9.KhXkxETKddWrO3dIlvjhHLKOl3OA0AcF0OnICWSWRwqE-PFMg0A0PhZ_xY3ag4xgyRQpo4IsPwLQzH4P32dV9Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"code\":\"AA\",\r\n        \"name\":\"AAA\",\r\n        \"history\":\"BBBBBBBB\"\r\n    },\r\n    {\r\n        \"code\":\"AB\",\r\n        \"name\":\"CAA\",\r\n        \"history\":\"BBBBBBBB\"\r\n    },\r\n    {\r\n        \"code\":\"AC\",\r\n        \"name\":\"AAC\",\r\n        \"history\":\"BBBBBBBB\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/airlines/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"airlines",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create or Update Airline",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNDU3NjI3LCJleHAiOjE1OTI1NDQwMjd9.KhXkxETKddWrO3dIlvjhHLKOl3OA0AcF0OnICWSWRwqE-PFMg0A0PhZ_xY3ag4xgyRQpo4IsPwLQzH4P32dV9Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"code\":\"AAS\",\r\n        \"name\":\"AAA\",\r\n        \"history\":\"BBBBDSASOSDSBBBB\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/airlines/AAS",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"airlines",
+										"AAS"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Flight",
+					"item": [
+						{
+							"name": "Delete - Flight",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/flights/1251",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"flights",
+										"1251"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create or Update Flight",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNDU3NjI3LCJleHAiOjE1OTI1NDQwMjd9.KhXkxETKddWrO3dIlvjhHLKOl3OA0AcF0OnICWSWRwqE-PFMg0A0PhZ_xY3ag4xgyRQpo4IsPwLQzH4P32dV9Q",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"number\":6785,\r\n\"capacity\":400,\r\n\"airlineCode\":\"KAL\",\r\n\"departureAirportCode\":\"ORD\",\r\n\"arrivalAirportCode\":\"DTW\",\r\n\"departureDate\":\"2020-05-12\",\r\n\"arrivalDate\":\"2020-06-13 13:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/flights/6785",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"flights",
+										"6785"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Flights",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBtaXUuZWR1IiwiaWF0IjoxNTkyNTc0ODEzLCJleHAiOjE1OTI2NjEyMTN9.xVgfWr0v70ujxqArKx7f_8YZg66adFoGXHXwyESAj6XIMTc-m1nxWm6axTRSYeUvDKuBk8AVdERV9c00Xy_hMQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[{\"number\":6786,\r\n\"capacity\":400,\r\n\"airlineCode\":\"KAL\",\r\n\"departureAirportCode\":\"ORD\",\r\n\"arrivalAirportCode\":\"DTW\",\r\n\"departureDate\":\"2020-07-12 00:00\",\r\n\"arrivalDate\":\"2020-07-13 00:00\"\r\n}]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/flights",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"flights"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "74db8c85-93ae-404d-b1fd-78df6e1253c5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f934be85-dd4f-4d34-9956-c32529efc148",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

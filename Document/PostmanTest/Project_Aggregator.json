@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "6f54eaa4-0fec-4b9d-aa04-d80c5698ff20",
+		"name": "Project_Aggregator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all airports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/airports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airports"
+					]
+				},
+				"description": "View list of airports"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all airline by departureAirportCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/airlines?departure_airport_code=CID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airlines"
+					],
+					"query": [
+						{
+							"key": "departure_airport_code",
+							"value": "CID"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all flights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/flights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flights"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View list of airports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/airports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View list of airlines flying out of an airport code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/airlines?departure_airport_code=CID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airlines"
+					],
+					"query": [
+						{
+							"key": "departure_airport_code",
+							"value": "CID"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View list of own reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/reservations?passenger_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"reservations"
+					],
+					"query": [
+						{
+							"key": "passenger_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View details of a reservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reservation by code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/reservations?code=123451",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"reservations"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "123451"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reservation detail by  reservation code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/reservations?code=123451",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"reservations"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "123451"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
