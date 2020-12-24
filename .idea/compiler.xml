@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EurekaServer" />
+        <module name="ReservationService" />
+        <module name="api-gateway" />
+        <module name="EmailService" />
+        <module name="AirportService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="airlinereservationsystem" target="1.8" />
+      <module name="AirportService" target="1.8" />
+      <module name="api-gateway" target="1.8" />
+      <module name="EmailService" target="1.8" />
+      <module name="EurekaServer" target="1.8" />
+      <module name="ReservationService" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AirportService" options="-parameters" />
+      <module name="EmailService" options="-parameters" />
+      <module name="EurekaServer" options="-parameters" />
+      <module name="ReservationService" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,18 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: quartz_email_service
+  datasource:
+    url: jdbc:mysql://localhost/cs544_project_email
+    username: cs544
+    password: 201511
+    driverClassName: com.mysql.cj.jdbc.Driver
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org:
+        quartz:
+          threadPool:
+            threadCount: 5
+  
